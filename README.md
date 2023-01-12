@@ -1,1 +1,1 @@
-# truth_table_generator
+# Truth Table Generator
