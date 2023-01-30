@@ -1,1 +1,1 @@
-# Truth Table Generator
+# Light Up Puzzle Generator
