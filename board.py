@@ -170,13 +170,19 @@ class Board(wx.Panel):
         # numbers_shown: % of blocks showing number of adjacent lightbulbs
 
         if (self.main_frame.info.diff_options.GetStringSelection() == "Easy"):
-            self.block_percentage = 0.3              
-            self.light_bulb_near_block_percentage = 0.4
-            self.numbers_shown_percentage = 0.8
+            # self.block_percentage = 0.3              
+            # self.light_bulb_near_block_percentage = 0.5
+            # self.numbers_shown_percentage = 0.8
+            self.block_percentage = random.uniform(0.25, 0.35)         
+            self.light_bulb_near_block_percentage = random.uniform(0.7, 0.9)  
+            self.numbers_shown_percentage = random.uniform(0.8, 0.9)  
         else:
-            self.block_percentage = 0.2          
-            self.light_bulb_near_block_percentage = 0.3
-            self.numbers_shown_percentage = 0.65
+            # self.block_percentage = 0.2          
+            # self.light_bulb_near_block_percentage = 0.5
+            # self.numbers_shown_percentage = 0.6
+            self.block_percentage = 0.25     
+            self.light_bulb_near_block_percentage = random.uniform(0.6, 0.7)  
+            self.numbers_shown_percentage = random.uniform(0.7, 0.8)
     
     def SetBoardSize(self):
         if (self.main_frame.info.size_options.GetStringSelection() == "Small"):
@@ -239,6 +245,8 @@ class Board(wx.Panel):
         # fill out the rest of the board with bulbs so that every tile is lit and the board has (ideally) one solution.
         board_complete = False # check if we've made a completely lit up board with only one solution
         temp_light_pos = []
+        iterationMax = 100
+        iterationCounter = 0
         while (not board_complete):
             tiles_available = self.available_tiles.copy() # copy available tiles list
             self.light_up_data.clear()
@@ -262,12 +270,13 @@ class Board(wx.Panel):
                     one_solution = False
                     break
 
-            if (one_solution):
+            if (one_solution or iterationCounter == iterationMax):
                 board_complete = True
             else:
                 # remove lightbulbs placed earlier
                 for pos in temp_light_pos:
                     self.board_data[pos[0]][pos[1]] = -1
+                iterationCounter += 1
 
         self.available_tiles.clear()
 
