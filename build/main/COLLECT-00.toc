@@ -1,6 +1,4 @@
-([('main.exe',
-   'C:\\Users\\janan\\OneDrive\\Documents\\RPI\\Computability_Logic\\LightUp-Puzzle\\build\\main\\main.exe',
-   'EXECUTABLE'),
+([('main.exe', 'C:\\Users\\janan\\build\\main\\main.exe', 'EXECUTABLE'),
   ('python39.dll',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\\python39.dll',
@@ -41,6 +39,14 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\\DLLs\\_ssl.pyd',
    'EXTENSION'),
+  ('_elementtree.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\\DLLs\\_elementtree.pyd',
+   'EXTENSION'),
+  ('pyexpat.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
   ('wx\\_adv.cp39-win_amd64.pyd',
    'C:\\Users\\janan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python39\\site-packages\\wx\\_adv.cp39-win_amd64.pyd',
    'EXTENSION'),
@@ -67,11 +73,11 @@
   ('wx\\VCRUNTIME140_1.dll',
    'C:\\Users\\janan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python39\\site-packages\\wx\\VCRUNTIME140_1.dll',
    'BINARY'),
-  ('wx\\wxmsw32u_core_vc140_x64.dll',
-   'C:\\Users\\janan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python39\\site-packages\\wx\\wxmsw32u_core_vc140_x64.dll',
-   'BINARY'),
   ('wx\\wxbase32u_vc140_x64.dll',
    'C:\\Users\\janan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python39\\site-packages\\wx\\wxbase32u_vc140_x64.dll',
+   'BINARY'),
+  ('wx\\wxmsw32u_core_vc140_x64.dll',
+   'C:\\Users\\janan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python39\\site-packages\\wx\\wxmsw32u_core_vc140_x64.dll',
    'BINARY'),
   ('wx\\wxmsw32u_html_vc140_x64.dll',
    'C:\\Users\\janan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python39\\site-packages\\wx\\wxmsw32u_html_vc140_x64.dll',
@@ -83,5 +89,5 @@
    'C:\\Users\\janan\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python39\\site-packages\\wx\\wxbase32u_net_vc140_x64.dll',
    'BINARY'),
   ('base_library.zip',
-   'C:\\Users\\janan\\OneDrive\\Documents\\RPI\\Computability_Logic\\LightUp-Puzzle\\build\\main\\base_library.zip',
+   'C:\\Users\\janan\\build\\main\\base_library.zip',
    'DATA')],)
