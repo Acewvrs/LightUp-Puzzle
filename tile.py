@@ -15,7 +15,7 @@ class Tile(wx.Button):
         self.parent = parent #reference to board panel
         self.board = parent.board
         self.state = tile_state
-        self.number = adj_bulbs #number on the (black) tile indicating the number of adjacent bulbs
+        self.number = adj_bulbs #number on the (block) tile indicating the number of adjacent bulbs
         self.light_bulb = False
         self.light_bulb_img = parent.light_bulb_img
         self.red_X_img = parent.red_X_img

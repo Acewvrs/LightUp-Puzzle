@@ -44,6 +44,9 @@ class Info(wx.Panel):
         row2 = wx.BoxSizer(wx.VERTICAL)
         row3 = wx.BoxSizer(wx.VERTICAL)
         row4 = wx.BoxSizer(wx.VERTICAL)
+        row5 = wx.BoxSizer(wx.VERTICAL)
+        row6 = wx.BoxSizer(wx.VERTICAL)
+        row7 = wx.BoxSizer(wx.VERTICAL)
 
         # create buttons
         self.create_button = wx.Button(self, label = "Create")
@@ -61,10 +64,25 @@ class Info(wx.Panel):
         self.check_button.Bind(wx.EVT_BUTTON, self.OnCheck)
         row3.Add(self.check_button, 1, wx.ALL, 5)
 
-        self.check_button = wx.Button(self, label = "Reset")
+        self.check_button = wx.Button(self, label = "Clear")
         self.check_button.SetSize((BUTTON_WIDTH, BUTTON_HEIGHT))
-        self.check_button.Bind(wx.EVT_BUTTON, self.OnReset)
+        self.check_button.Bind(wx.EVT_BUTTON, self.OnClear)
         row4.Add(self.check_button, 1, wx.ALL, 5)
+
+        self.save_button = wx.Button(self, label = "Save")
+        self.save_button.SetSize((BUTTON_WIDTH, BUTTON_HEIGHT))
+        self.save_button.Bind(wx.EVT_BUTTON, self.OnSave)
+        row5.Add(self.save_button, 1, wx.ALL, 5)
+
+        self.load_button = wx.Button(self, label = "Load")
+        self.load_button.SetSize((BUTTON_WIDTH, BUTTON_HEIGHT))
+        self.load_button.Bind(wx.EVT_BUTTON, self.OnLoad)
+        row6.Add(self.load_button, 1, wx.ALL, 5)
+
+        self.legup_button = wx.Button(self, label = "Save Board \nfor LEGUP")
+        self.legup_button.SetSize((BUTTON_WIDTH, BUTTON_HEIGHT))
+        self.legup_button.Bind(wx.EVT_BUTTON, self.OnLegup)
+        row7.Add(self.legup_button, 1, wx.ALL, 5)
 
         # add radiobox for users to select difficulty and size selection
         difficulty_list = ["Easy", "Hard"]     
@@ -82,6 +100,9 @@ class Info(wx.Panel):
         text_sizer.Add(row4, 1, wx.ALL, 5)
         text_sizer.Add(self.size_options, 0, wx.ALL, 5)
         text_sizer.Add(self.diff_options, 0, wx.ALL, 5)
+        text_sizer.Add(row5, 1, wx.ALL, 5)
+        text_sizer.Add(row6, 1, wx.ALL, 5)
+        text_sizer.Add(row7, 2, wx.VERTICAL, 5)
 
         # add the text panel and the board into the main sizer
         main_sizer.Add(self.grid_sizer, 1, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5)
@@ -93,6 +114,7 @@ class Info(wx.Panel):
         if (self.board.BoardDisplayed):
             self.board.ResetBoard()
 
+        self.board.FindBoardSize()
         self.board.CreateBoard()
         self.board.DisplayBoard()
         self.board.InitializeBoardList(self.board.light_board, 0)
@@ -103,15 +125,36 @@ class Info(wx.Panel):
     
     def OnCheck(self, event):
         if (self.board.BoardDisplayed):
-            self.board.CheckBoard()
+            self.board.CheckBoardIsSolved(True)
     
-    def OnReset(self, event):
+    def OnClear(self, event):
+        # do a soft reset (different than self.board.ResetBoard) as
+        # it doesn't create a completely new board
         if (self.board.BoardDisplayed):
             self.board.DeleteTiles()
             self.board.board = []
             self.board.light_board = []
             self.board.DisplayBoard()
             self.board.InitializeBoardList(self.board.light_board, 0)
+
+    def OnSave(self, event):
+        if (self.board.BoardDisplayed):
+            self.board.SaveBoard(LEGUP=False)
+        else:
+            self.board.DisplayInitializeBoardMsg()
+
+    def OnLoad(self, event):
+        if (self.board.BoardDisplayed):
+            self.board.ResetBoard()
+
+        self.board.LoadBoard()
+        # self.OnCreate(event)
+
+    def OnLegup(self, event):
+        if (self.board.BoardDisplayed):
+            self.board.SaveBoard(LEGUP=True)
+        else:
+            self.board.DisplayInitializeBoardMsg()
 
 if __name__ == '__main__':
     app = wx.App()
