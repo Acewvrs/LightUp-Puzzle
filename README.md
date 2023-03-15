@@ -1,4 +1,6 @@
 # Light Up Puzzle Generator
+<img width="514" alt="image" src="https://user-images.githubusercontent.com/40209659/225202605-8029ca35-9206-4669-b9c3-b5e87cb5b8f4.png">
+
 
 ## Description
 The Light Up Puzzle Generator is an interactive GUI for playing light-up board puzzles. You can generate a random puzzle based on difficulty, as well as create custom puzzles and solve them on your own.
