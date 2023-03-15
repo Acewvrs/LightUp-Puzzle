@@ -10,7 +10,7 @@ You can generate puzzles of the three given sizes: small (7x7), medium (10x10), 
 
 If you don't like how puzzles are being generated, you can make a custom .xml file to create your own puzzle. The puzzle format of your xml file must match the format of puzzle files created by this program in order to be readable.
 
-### LEGUP Puzzle Generator
+### Puzzle Generator (for LEGUP)
 If you are a part of the [LEGUP team](https://github.com/Bram-Hub/LEGUP), you may also want to use this to create new Light Up Puzzles for LEGUP. It will always create a new board, which means if you open up the file you saved on LEGUP, all the progress you made on the board will be lost. 
 
 ### Save and Load
