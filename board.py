@@ -567,7 +567,7 @@ class Board(wx.Panel):
         # and start from the beginning to create a new (empty) board
         # that matches the xml format for LEGUP
 
-        root = ET.Element('LegUp')
+        root = ET.Element('Legup')
         root.set('version', '2.0.0')
 
         puzzle = ET.SubElement(root, 'puzzle')
