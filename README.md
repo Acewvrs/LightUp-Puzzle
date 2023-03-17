@@ -23,7 +23,7 @@ You can solve a puzzle manually. Left click a tile to place lightbulbs. Right cl
 
 You can load the solved board state by clicking 'Solve'.
 
-**The feature for auto-solving custom puzzles has not been implemented. If you'd like it to solve it you need to provide the solution in the custom xml file you provide.**
+**If you'd like the program to solve custom puzzles you need to provide the solution in the custom xml file you provide.**
 
 ## Running the program
 1. Clone the repository and download the files locally
