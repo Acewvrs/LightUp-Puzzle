@@ -24,7 +24,7 @@ You can solve a puzzle manually. Left click a tile to place lightbulbs. Right cl
 You can load the solved board state by clicking 'Solve'.
 
 ## Running the program
-1. Clone the repository and download the files locally
+1. Clone the repository and save the files locally
 2. Navigate to the folder the files are stored
 3. Go to dist. There should be one folder named 'main'. Click on it.
 4. Run main.exe 
