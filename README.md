@@ -23,8 +23,6 @@ You can solve a puzzle manually. Left click a tile to place lightbulbs. Right cl
 
 You can load the solved board state by clicking 'Solve'.
 
-**If you'd like the program to solve custom puzzles you need to provide the solution in the custom xml file you provide.**
-
 ## Running the program
 1. Clone the repository and download the files locally
 2. Navigate to the folder the files are stored
